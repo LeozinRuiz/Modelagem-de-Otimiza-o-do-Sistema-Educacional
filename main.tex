@@ -272,6 +272,7 @@ Esses resultados nos permitem não apenas visualizar o funcionamento do modelo, 
 
 Isso nos dá uma relação muito interessante: algoritmos de enumeração como o \emph{solver} são muito custosos, então são úteis em casos pequenos, mas impraticáveis em números maiores, que é quase a situação contrária da nossa heurística, que funciona muito bem em casos de grandes números, mas é pouco precisa quando existem poucos valores. Portanto, é válido afirmar que os nossos modelos alcançam de forma satisfatória o nosso objetivo de impedir a hiperconcentração de professores de excelência com um método aplicável computacionalmente.
 
+
 \section{Outras aplicações}
 
 Embora tenha sido desenvolvido para a organização educacional, o modelo não depende de nada específico de professores ou escolas. Ele usa apenas três ingredientes: um conjunto de itens com um valor (os professores, com peso $\delta(p)$), um conjunto de destinos com uma demanda (as escolas, com demandas $q(s,k)$) e o objetivo de elevar o grau do destino em pior situação, isto é, maximizar o menor grau $\delta(s)$. Sempre que um problema tem essa forma, o grafo bipartido $G = (P \cup E, A)$, os algoritmos e as proposições deste trabalho se aplicam sem alterações. Três exemplos ilustram isso.
