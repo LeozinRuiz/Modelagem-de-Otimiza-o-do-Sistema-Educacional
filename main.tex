@@ -195,7 +195,6 @@ Para encontrar um valor $m(f)$ aproximado, um algoritmo interessante é adiciona
 
 A principal limitação do primeiro modelo é ignorar as matérias: uma escola pode receber o total de professores que pede e, mesmo assim, ficar sem professores de uma matéria específica. Por isso é necessário desenvolver um código que lide com essa limitação.
 
-% ------------------------------------------------------------
 \section{Modelos Finais}
 
 O modelo final adiciona um número fixo de arestas de cada matéria $k$ para cada escola $s$, utilizando o modelo base como peça fundamental no funcionamento. Vamos buscar maximizar o menor índice de qualidade geral, pois as escolas que utilizamos para aplicar o modelo possuem muita diferença nas quantidades de vagas necessárias, mas exatamente o mesmo algoritmo funciona para maximizar o menor grau, mudando apenas a constante da Proposição~\ref{prop:3} e uma condição no código explicada posteriormente.
@@ -273,7 +272,6 @@ Esses resultados nos permitem não apenas visualizar o funcionamento do modelo, 
 
 Isso nos dá uma relação muito interessante: algoritmos de enumeração como o \emph{solver} são muito custosos, então são úteis em casos pequenos, mas impraticáveis em números maiores, que é quase a situação contrária da nossa heurística, que funciona muito bem em casos de grandes números, mas é pouco precisa quando existem poucos valores. Portanto, é válido afirmar que os nossos modelos alcançam de forma satisfatória o nosso objetivo de impedir a hiperconcentração de professores de excelência com um método aplicável computacionalmente.
 
-% ------------------------------------------------------------
 \section{Outras aplicações}
 
 Embora tenha sido desenvolvido para a organização educacional, o modelo não depende de nada específico de professores ou escolas. Ele usa apenas três ingredientes: um conjunto de itens com um valor (os professores, com peso $\delta(p)$), um conjunto de destinos com uma demanda (as escolas, com demandas $q(s,k)$) e o objetivo de elevar o grau do destino em pior situação, isto é, maximizar o menor grau $\delta(s)$. Sempre que um problema tem essa forma, o grafo bipartido $G = (P \cup E, A)$, os algoritmos e as proposições deste trabalho se aplicam sem alterações. Três exemplos ilustram isso.
